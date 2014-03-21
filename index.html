@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style type="text/css">
+            html,body{user-select:none;-webkit-user-select:none;-mox-user-select:none;-ms-user-select:none;-o-user-select:none}
+            .middle{min-width:320px;max-width:1024px;text-align:center;margin:0 auto}
+            .arrow-up{height:0;width:0;border-bottom:.8rem solid #FF214B;border-left:.8rem solid rgba(0,0,0,0);-webkit-transform:rotate(225deg);margin-left:.6rem;cursor:pointer}
+            .arrow-down{height:0;width:0;border-bottom:.8rem solid #FF214B;border-left:.8rem solid rgba(0,0,0,0);-webkit-transform:rotate(45deg);margin-left:.6rem;cursor:pointer}
+            .select-box-value:first-child{display:block}
+            .select-box-value{display:none}
+            .custom-select-box{display:inline-block}
+            .select-box{width:2rem;height:2rem;border-radius:100%;background-color:#ff214b;color:#fff;text-align:center;display:table-cell;vertical-align:middle;font-size:1.5rem}
+        </style>
+    </head>
+    <body>
+        <div class="middle">
+            <h1>Custom vertical Select Box</h1>
+
+            <div class="custom-select-box">
+                <div class="arrow-up arrow-up2"></div>  
+                <div class="select-box select-box2">
+                    <div class="select-box-value">0</div>
+                    <div class="select-box-value">1</div>
+                    <div class="select-box-value">2</div>
+                    <div class="select-box-value">3</div>
+                    <div class="select-box-value">4</div>
+                    <div class="select-box-value">5</div>
+                    <div class="select-box-value">6</div>
+                    <div class="select-box-value">7</div>
+                    <div class="select-box-value">8</div>
+                    <div class="select-box-value">9</div>
+                </div>
+                <div class="arrow-down arrow-down2"></div>
+            </div> 
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){$(".arrow-up").click(function(){$(".select-box div:visible").next().show().prev().hide()});$(".arrow-down").click(function(){$(".select-box div:visible").prev().show().next().hide()})})
+        </script>
+    </body>
+</html>
